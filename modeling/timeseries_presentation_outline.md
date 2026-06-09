@@ -67,11 +67,16 @@
 - If the professor asks about stationarity, explain ADF first and keep cointegration as backup material only.
 
 ## 6. Analysis Result
-### Slide message
-- `Baseline` tests whether raw temperature is enough.
-- `KTCI` tests whether a climate-comfort index is better than temperature.
-- `KTCI-a` tests whether Korean season recalibration improves the fit.
-- `KTCI-a-roll7` tests whether smoothing the season-aware index stabilizes short-term prediction.
+### 6.1. 모델링
+- SARIMAX 시각화(vs. Actual)
+  - actual vs baseline 결과
+  - actual vs KTCI 결과
+  - actual vs KTCI-a 결과
+  - actual vs KTCI-a-roll7 결과
+- VIF로 다중공선성 점검
+- 평가 지표
+- 잔차 진단
+- 계수 해석
 
 ### How to interpret Granger vs SARIMAX
 - Granger causality answers: "Does X help predict Y at some lag?"
@@ -79,9 +84,11 @@
 - Therefore, the best Granger variable and the best SARIMAX model do not need to be the same.
 - This difference is expected and should be explained explicitly in the presentation.
 
+### 6.2. 결과
+- actual vs 전체 결과
+
 ### Recommended figures
 - Visitor time-series plot with major seasonal and COVID shifts.
-- Baseline vs `KTCI` vs `KTCI-a` vs `KTCI-a-roll7` forecast comparison.
 - Transition-period zoom-in plot where `season_month != season_temp`.
 - Residual ACF/PACF and Ljung-Box table.
 - Coefficient comparison table for the four models.
