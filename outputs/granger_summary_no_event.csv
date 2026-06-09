@@ -1,0 +1,7 @@
+﻿model,display,predictors,story,best_lag,best_f_stat,best_p_value,significant_lags_p05,n_obs_at_best_lag,decision_best_p05,best_q_fdr,decision_best_q05
+Baseline_Temperature,Baseline (Temperature),tavg,단순 평균기온 baseline,1,146.0215411534916,3.0310882418817394e-33,"1, 2, 3, 4, 5, 6, 7",6208,reject_no_granger,4.546632362822609e-33,reject_no_granger_after_fdr
+KTCI,KTCI Model,ktci,월 기준 계절 가중치를 적용한 관광쾌적도,1,63.206371482924524,2.1957624657087138e-15,"1, 2, 3, 4, 5, 6, 7",6208,reject_no_granger,2.1957624657087138e-15,reject_no_granger_after_fdr
+KTCI_a,KTCI-a Model,ktci_a,실제 기온 흐름으로 계절을 재계산한 관광쾌적도,1,68.45643821208711,1.57355205199631e-16,"1, 2, 3, 4, 5, 6, 7",6208,reject_no_granger,1.888262462395572e-16,reject_no_granger_after_fdr
+KTCI_a_roll7,KTCI-a-roll7 Model,ktci_a_roll7,KTCI-a의 7일 rolling 평균으로 체감 지속성 반영,1,189.26089805977887,1.929552715876211e-42,"1, 2, 3, 4, 5, 6, 7",6208,reject_no_granger,5.788658147628633e-42,reject_no_granger_after_fdr
+Decomposition_Month_Weighted,Decomposition Model,"Cd_month_w, Ca_month_w, P_month_w, W_month_w, S_month_w",KTCI를 Cd/Ca/P/W/S 월 기준 계절 가중 성분으로 분해,1,35.147717552408615,1.418979914583805e-35,"1, 2, 3, 4, 5, 6, 7",6208,reject_no_granger,2.83795982916761e-35,reject_no_granger_after_fdr
+Decomposition_a_TempSeason_Weighted,Decomposition-a Model,"Cd_temp_w, Ca_temp_w, P_temp_w, W_temp_w, S_temp_w",KTCI-a를 Cd/Ca/P/W/S 기온 기준 계절 가중 성분으로 분해,1,43.06591797703623,8.811443861091965e-44,"1, 2, 3, 4, 5, 6, 7",6208,reject_no_granger,5.286866316655179e-43,reject_no_granger_after_fdr
